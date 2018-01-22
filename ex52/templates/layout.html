@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+  	<title>Buddy the Elf - Saves X-Mas</title>
+
+<style>
+
+
+	body {
+{% if background %}
+      background:url({{url_for('static', filename=background)}});
+{% else %}
+      background-color: #C9F1DB;
+{% endif %}
+ 	background-repeat:no-repeat;
+    background-size:100%;
+    background color: #C9F1DB;
+ 
+}
+ 
+body			{font-family: sans-serif;  text-align: center;}
+a				{ color: #eee;}
+h2				{ font-family: 'Courier'; font-size: 100%;}
+pre             { font-family: 'Courier'; font-size: 100%;}
+
+
+/*typewriter effect*/
+/* by: Geoff Graham, found on: css-tricks.com*/
+/* https://css-tricks.com/snippets/css/typewriter-effect/ */
+.typewriter h1 {
+  color: #eee;
+  font-family: 'Zapfino'; font_size 350%
+  border-bottom: 2xp solid #eee;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .10em solid #eee; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #eee }
+}
+
+
+button {
+      background-color: black;
+      border: hidden;
+      color: white;
+      padding: 2px 4px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: black;
+      color: white;
+}
+
+
+</style>
+</head>
+
+<body> 
+  {% block content %}
+  <p>Empty Layout</p>
+  {% endblock %}
+</body>
+</html>

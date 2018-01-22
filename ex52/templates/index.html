@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="world">
+<h1> Python Webgame </h1>
+<h2> Choose your Mission </h2>
+<form action="/home" method="POST">
+  <button name="whichgame" value="1">Buddy The Elf - saves X-Mas (again)</button>
+  <button name="whichgame" value="0">GOTHON'S FROM PLANET PERCAL #25</button>
+</form>
+</div>
+
+{% endblock %}

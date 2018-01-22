@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if scene %}
+<div class="typewriter">
+  <h1>{{ scene.title }}</h1>
+</div>
+  		
+ <pre>{{ scene.description }}</pre>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+ 
+  {% if scene.urlname == "End" %}
+    <p><a href="/">Play Again?</a></p>
+  {% else %}
+    <p> 
+      <form action="/game" method="POST">
+        Answer: <input type="text" name="userinput"> <input type="SUBMIT">
+      </form>
+      
+    </p>
+  {% endif %}
+{% else %}
+  <p><a href="/">Start at the Beginning</a></p>
+{% endif %}
+{% endblock %}
