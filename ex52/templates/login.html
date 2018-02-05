@@ -4,16 +4,20 @@
 <div id="world">
 <h1> Python Webgame </h1>
 <h2> Login Page </h2>
-<form action="/" method="POST">
-	<input type="text" placeholder="Username" name="username" value="{{
-        request.form.username }}">
-    <input type="password" placeholder="Password" name="password" value="{{
-        request.form.password }}">
-    <input class="btn btn-default" type="submit" value="Login">
+<h3> Hey buddy! This is a Python Webgame. Take a seat, Login (or register) and enjoy the ride! </h3>
+
+<form action="/login" method="POST">
+	Your username:
+	<input type="text" name="username">
+    Your password:
+    <input type="password" name="password">
+    <input type="submit" value="Login">
 </form>
+
 {% if error %}
     <p class="error"><strong>Error:</strong> {{ error }}
 {% endif %}  
 </div>
 
+<a href="/registration"><button>Register</button></a>
 {% endblock %}

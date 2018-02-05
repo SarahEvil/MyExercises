@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="world">
+<h1> Python Webgame </h1>
+<h2> Registration </h2>
+
+  {% if message %}
+  <section id="message">
+      <p>{{ message }}</p>
+  </section>
+  {% else %}
+
+  	<p>
+  		<form action="/registration" method="POST">
+  			<p>Username:</p>
+    		<input type="text" name="username">
+    		<p>Password:</p>
+    		<input type="text" name="password">
+    		<input type="submit" value="Submit">
+    	</form>
+	</p>
+<a href="/login"><button>Login</button></a>
+{% endif %}
+{% endblock %}
+</div>
